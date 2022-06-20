@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.insaPrj5.hr.salary.dao.BaseSalaryDAO">
+
+	<resultMap type="kr.co.insaPrj5.hr.salary.to.BaseSalaryTO" id="baseSalaryResult">
+		<result property="positionCode" column="POSITION_CODE" />
+		<result property="position" column="POSITION" />
+		<result property="baseSalary" column="BASE_SALARY" />
+		<result property="hobongRatio" column="HOBONG_RATIO" />
+	</resultMap>
+ 
+	<select id="selectBaseSalaryList" resultMap="baseSalaryResult">
+		<![CDATA[
+			SELECT * FROM POSITION 
+			ORDER BY BASE_SALARY asc;
+		]]>
+	</select>
+
+	<update id="updateBaseSalary" parameterType="baseSalaryTO">
+		<![CDATA[
+			UPDATE POSITION SET
+			BASE_SALARY = #{baseSalary}
+			, HOBONG_RATIO = #{hobongRatio,mode=IN,javaType=String,jdbcType=VARCHAR}
+			WHERE POSITION_CODE = #{positionCode}
+		]]>
+	</update>
+ 
+	<update id="updatePosition" parameterType="baseSalaryTO">
+		<![CDATA[
+			UPDATE  POSITION SET
+			POSITION = #{position}
+			, BASE_SALARY = #{baseSalary}
+			, HOBONG_RATIO = #{hobongRatio}
+			WHERE POSITION_CODE = #{positionCode}
+		]]>
+	</update>
+	
+	<insert id="insertPosition" parameterType="baseSalaryTO">
+		<![CDATA[
+			INSERT INTO POSITION 
+			VALUES 
+			( #{positionCode}
+			, #{position}
+			, #{baseSalary}
+			, #{hobongRatio} )
+		]]>
+	</insert>
+	
+	<delete id="deletePosition" parameterType="baseSalaryTO">
+		<![CDATA[
+			DELETE POSITION
+			WHERE POSITION_CODE = #{positionCode}
+			AND POSITION = #{position}
+		]]>
+	</delete>
+	
+
+	
+</mapper>

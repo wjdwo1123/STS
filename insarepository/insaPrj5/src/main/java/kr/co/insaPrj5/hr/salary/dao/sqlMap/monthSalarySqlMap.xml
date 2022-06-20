@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.insaPrj5.hr.salary.dao.MonthSalaryDAO">
+
+	<resultMap type="kr.co.insaPrj5.hr.salary.to.MonthSalaryTO" id="monthSalaryResult">
+		<result property="empCode" column="EMP_CODE" />
+		<result property="applyYearMonth" column="APPLY_YEAR_MONTH" />
+		<result property="basicSalary" column="BASIC_SALARY" />
+		<result property="positionSalary" column="POSITION_SALARY" />
+		<result property="familySalary" column="FAMILY_SALARY" />
+		<result property="foodSalary" column="FOOD_SALARY" />
+		<result property="overWorkSalary" column="OVER_WORK_SALARY" />
+		<result property="nationalPension" column="NATIONAL_PENSION" />
+		<result property="healthInsurance" column="HEALTH_INSURANCE" />
+		<result property="longTermInsurance" column="LONG_TERM_INSURANCE" />
+		<result property="employmentInsurance" column="EMPLOYMENT_INSURANCE" />
+		<result property="religionDonation" column="RELIGION_DONATION" />
+		<result property="incomeTax" column="INCOME_TAX" />
+		<result property="residentTax" column="RESIDENT_TAX" />
+		<result property="basicSalBefore" column="BASIC_SAL_BEFORE" />
+		<result property="finalizeStatus" column="FINALIZE_STATUS" />
+		<result property="totalSalary" column="TOTAL_SALARY" />
+		<result property="totalExpense" column="TOTAL_EXPENSE" />
+		<result property="netAmount" column="NET_AMOUNT" />
+		<result property="totalDeduction" column="TOTAL_DEDUCTION" />
+	</resultMap>
+
+	<select id="batchMonthSalaryProcess" parameterType="map" statementType="CALLABLE">
+		<![CDATA[
+        {call P_CREATE_MONTH_SALARY(
+        	#{applyYearMonth,mode=IN,javaType=String,jdbcType=VARCHAR}
+   	   		,#{empCode,mode=IN,javaType=String,jdbcType=VARCHAR}
+  	      	,#{result, mode=OUT, javaType=java.sql.ResultSet, jdbcType=CURSOR, resultMap=monthSalaryResult}
+  	      	,#{errorCode, mode=OUT, javaType=String, jdbcType=VARCHAR}
+        	,#{errorMsg, mode=OUT, javaType=String, jdbcType=VARCHAR}
+   	     )}
+    	]]>	
+	</select>
+
+	<select id="selectYearSalary" resultMap="monthSalaryResult" parameterType="map">
+		<![CDATA[
+			SELECT * 
+			FROM MONTH_SALARY 
+			WHERE APPLY_YEAR_MONTH LIKE #{applyYearMonth}||'%'
+			AND EMP_CODE = #{empCode}
+			AND FINALIZE_STATUS = 'Y'
+		]]>
+	</select>
+	
+	<update id="updateMonthSalary" parameterType="MonthSalaryBean">
+		<![CDATA[
+			UPDATE MONTH_SALARY SET
+			FINALIZE_STATUS = #{finalizeStatus}
+			WHERE EMP_CODE = #{empCode}
+			AND APPLY_YEAR_MONTH = #{applyYearMonth}
+		]]>
+	</update>
+	
+</mapper>

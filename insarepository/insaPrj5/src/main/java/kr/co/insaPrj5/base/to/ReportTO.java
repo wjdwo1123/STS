@@ -1,0 +1,9 @@
+package kr.co.insaPrj5.base.to;
+
+import lombok.Data;
+
+@Data
+public class ReportTO {
+   private String empName, hiredate, occupation, employmentType, position, address, detailAddress, deptName;
+
+}

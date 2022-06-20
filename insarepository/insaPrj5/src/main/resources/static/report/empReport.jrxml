@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9f5bd761-da5e-4516-bad7-461677a962c4">
+	<property name="ireport.zoom" value="1.4641000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="empNo" class="java.lang.String"/>
+	<field name="empName" class="java.lang.String"/>
+	<field name="hireDate" class="java.lang.String"/>
+	<field name="addr" class="java.lang.String"/>
+	<field name="detailAddr" class="java.lang.String"/>
+	<field name="deptName" class="java.lang.String"/>
+	<field name="rankName" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="46" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="297" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="555" height="293" uuid="25b797a0-c055-4e53-8da9-a5210effb9aa"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="127" width="555" height="31" uuid="5fc0b79d-9191-4c6d-8465-e9e1b1ccab0f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="96" width="555" height="31" uuid="490428b4-d4fd-4fa1-8eef-1c225716e6a0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="65" width="555" height="31" uuid="ffc99b83-5e7b-4546-810e-84d90fd12efd"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="34" width="555" height="31" uuid="80f97424-d0a7-4fbc-9fb4-4bc61d6eaee1"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="35" width="100" height="31" backcolor="#CCCCCC" uuid="ec539193-ca26-4e2f-ab27-b59bcb16d108"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="66" width="100" height="31" backcolor="#CCCCCC" uuid="7ce61d28-e20a-4ed4-a9ec-17ba1b7231b2"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="66" width="100" height="30" uuid="df3f5428-f5bb-4e28-b89a-0ca95b8476dd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="HY견고딕" size="13" isBold="true" pdfFontName="HYGoThic-Medium" pdfEncoding="UniKS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[성 명]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="1" width="555" height="33" uuid="56786b31-0c60-420b-89af-12c182b95677"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="3" width="353" height="31" uuid="1baaa942-11c0-498d-86df-fc6af3a04ebd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="HY견고딕" size="13" isBold="true" isItalic="true" isUnderline="false" pdfFontName="HYGoThic-Medium" pdfEncoding="UniKS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[hellbins]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="97" width="100" height="31" backcolor="#CCCCCC" uuid="9faa680a-2720-469c-920a-10270e7d4081"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="97" width="100" height="30" uuid="e1600cb6-715d-47ab-8591-79a01f3f0cfe"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="HY견고딕" size="13" isBold="true" pdfFontName="HYGoThic-Medium" pdfEncoding="UniKS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[주 소]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="353" y="34" width="100" height="31" backcolor="#CCCCCC" uuid="90a97c65-ee2f-4149-873e-99a4f1e56e33"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="35" width="100" height="30" uuid="2fd27739-c942-4f16-994a-2761232a45af"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="HY견고딕" size="13" isBold="true" pdfFontName="HYGoThic-Medium" pdfEncoding="UniKS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[사원번호]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="353" y="65" width="100" height="31" backcolor="#CCCCCC" uuid="0b35afc7-04c4-4c93-8d78-8a506d592119"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="353" y="67" width="100" height="29" uuid="e59b902a-2bf0-4e7b-b450-5dba4663fa1a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="HY견고딕" size="13" isBold="true" pdfFontName="HYGoThic-Medium" pdfEncoding="UniKS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[직 급]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="353" y="35" width="100" height="31" uuid="79b4d33b-068d-4f17-b51e-8ad367a0252c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="HY견고딕" size="13" isBold="true" pdfFontName="HYGoThic-Medium" pdfEncoding="UniKS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[근무지부서]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="128" width="100" height="31" backcolor="#CCCCCC" uuid="69a6ea9f-e111-44a4-9c1a-d26150fd0dde"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="209" width="553" height="38" uuid="26e1a9de-fff4-4d47-b727-171f60d73408"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="HY견고딕" size="13" isBold="true" pdfFontName="HYGoThic-Medium" pdfEncoding="UniKS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[※상기와 같이 재직 중임을 증명함]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="128" width="100" height="30" uuid="235abd6d-f640-4aef-bae9-ff2005f2e1bc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="HY견고딕" size="13" isBold="true" pdfFontName="HYGoThic-Medium" pdfEncoding="UniKS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[상세주소]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="453" y="35" width="102" height="30" uuid="8ef0a73f-45b8-4003-839b-b56af49a13b5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="HY견고딕" isBold="true" pdfFontName="HYGoThic-Medium" pdfEncoding="UniKS-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{deptName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="68" width="253" height="30" uuid="fb855526-e0c2-4451-b665-d9d0fc08737b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="HY견고딕" isBold="true" pdfFontName="HYGoThic-Medium" pdfEncoding="UniKS-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empName}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="353" y="1" width="100" height="33" backcolor="#CCCCCC" uuid="21f6b5c9-c6bd-4697-80bd-7924c68fce9a"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="353" y="3" width="100" height="31" uuid="32f80ae1-b231-4730-8807-527b4feed2b2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="HY견고딕" size="13" isBold="true" pdfFontName="HYGoThic-Medium" pdfEncoding="UniKS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[입사일자]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="453" y="1" width="102" height="33" uuid="6e8aa86d-6973-4b7a-a1e7-c59268d3b4f3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="HY견고딕" isBold="true" pdfFontName="HYGoThic-Medium" pdfEncoding="UniKS-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hireDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="-44" width="555" height="44" uuid="e54e4f00-443d-4525-a361-da9618cf90dc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="HY견고딕" size="22" isBold="true" pdfFontName="HYGoThic-Medium" pdfEncoding="UniKS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[재직증명서]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="36" width="253" height="31" uuid="013674be-7388-4093-bf29-de1093655118"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="HY견고딕" pdfFontName="HYGoThic-Medium" pdfEncoding="UniKS-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="65" width="100" height="31" uuid="bfb50ce6-4d85-4ccc-af4d-176993c7d565"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="HY견고딕" pdfFontName="HYGoThic-Medium" pdfEncoding="UniKS-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{positionName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="98" width="455" height="31" uuid="5a4c46b9-d4cf-46b4-b7cc-d19341901dcd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="HY견고딕" pdfFontName="HYGoThic-Medium" pdfEncoding="UniKS-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{baseAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="129" width="455" height="30" uuid="a063c984-3afc-47a5-9883-76224080d385"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="HY견고딕" pdfFontName="HYGoThic-Medium" pdfEncoding="UniKS-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{detailAddress}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
