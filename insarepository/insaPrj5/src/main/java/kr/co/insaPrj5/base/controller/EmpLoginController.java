@@ -29,7 +29,12 @@ public class EmpLoginController {
 	public ModelMap empLogin(@RequestAttribute("reqData") PlatformData reqData,
 							@RequestAttribute("resData") PlatformData resData) throws Exception {
 		
-		System.out.println("�쁿�쁾�쁿�쁾濡쒓렇�씤而⑦듃濡ㅻ윭吏꾩엯�쁿�쁾�쁿�쁾");
+		System.out.println("占쎌겳占쎌겲占쎌겳占쎌겲嚥≪뮄�젃占쎌뵥�뚢뫂�뱜嚥▲끇�쑎筌욊쑴�뿯占쎌겳占쎌겲占쎌겳占쎌겲");
+		System.out.println("占쎌겳占쎌겲占쎌겳占쎌겲嚥≪뮄�젃占쎌뵥�뚢뫂�뱜嚥▲끇�쑎筌욊쑴�뿯占쎌겳占쎌겲占쎌겳占쎌겲");
+		System.out.println("占쎌겳占쎌겲占쎌겳占쎌겲嚥≪뮄�젃占쎌뵥�뚢뫂�뱜嚥▲끇�쑎筌욊쑴�뿯占쎌겳占쎌겲占쎌겳占쎌겲");
+
+		System.out.println("占쎌겳占쎌겲占쎌겳占쎌겲嚥≪뮄�젃占쎌뵥�뚢뫂�뱜嚥▲끇�쑎筌욊쑴�뿯占쎌겳占쎌겲占쎌겳占쎌겲");
+		System.out.println("占쎌겳占쎌겲占쎌겳占쎌겲嚥≪뮄�젃占쎌뵥�뚢뫂�뱜嚥▲끇�쑎筌욊쑴�뿯占쎌겳占쎌겲占쎌겳占쎌겲");
 		
 		String name = reqData.getVariable("empName").getString();
 		String empCode = reqData.getVariable("empCode").getString();
@@ -43,5 +48,6 @@ public class EmpLoginController {
 			datasetBeanMapper.beanToDataset(resData, empto, EmpTO.class);
 	
 		return null;
+		
 	}
 }
