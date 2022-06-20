@@ -58,42 +58,15 @@ public class BaseApplicationServiceImpl implements BaseApplicationService {
 	
 	
 	public boolean loginEmployee(String name, String empCode) throws IdNotFoundException, PwMissMatchException {
-		System.our.println("★★★★★★★★★★★★★★★★★★★★★★★★");
-		System.our.println("★★★★★★★★★★★★★★★★★★★★★★★★");
-		System.our.println("★★★★★★★★★★★★★★★★★★★★★★★★");
-		System.our.println("★★★★★★★★★★★★★★★★★★★★★★★★");
-		System.our.println("★★★★★★★★★★★★★★★★★★★★★★★★");
-		System.our.println("★★★★★★★★★★★★★★★★★★★★★★★★");
-		System.our.println("★★★★★★★★★★★★★★★★★★★★★★★★");
-		System.our.println("★★★★★★★★★★★★★★★★★★★★★★★★");
-		System.our.println("★★★★★★★★★★★★★★★★★★★★★★★★");
-		System.our.println("★★★★★★★★★★★★★★★★★★★★★★★★");
-		System.our.println("★★★★★★★★★★★★★★★★★★★★★★★★");
-		System.our.println("★★★★★★★★★★★★★★★★★★★★★★★★");
-		System.our.println("★★★★★★★★★★★★★★★★★★★★★★★★");
-		System.our.println("★★★★★★★★★★★★★★★★★★★★★★★★");
-		
-		System.our.println("★★★★★★★★★★★★★★★★★★★★★★★★");
-		System.our.println("★★★★★★★★★★★★★★★★★★★★★★★★");
-		System.our.println("★★★★★★★★★★★★★★★★★★★★★★★★");
-		System.our.println("★★★★★★★★★★★★★★★★★★★★★★★★");
-		System.our.println("★★★★★★★★★★★★★★★★★★★★★★★★");
-		System.our.println("★★★★★★★★★★★★★★★★★★★★★★★★");
-		System.our.println("★★★★★★★★★★★★★★★★★★★★★★★★");
-		
-		
+		System.out.println("ddddd");
 		EmpTO emp = empApplicationService.selectEmp(name); // empName占쎌몵嚥∽옙 占쎄텢占쎌뜚占쎌벥 占쎌젟癰귣�占쏙옙 筌≪뼔�뮉占쎈뼄
-		System.our.println("�쁾�쁾�쁾�쁾�쁾�쁾�쁾�쁾�쁾�쁾�쁾");
-		System.our.println("�쁾�쁾�쁾�쁾�쁾�쁾�쁾�쁾�쁾�쁾�쁾");
 		if (emp == null) {			
-			throw new IdNotFoundException("占쎄텢占쎌뜚筌뤿굞�뵠 鈺곕똻�삺占쎈릭筌욑옙 占쎈륫占쎈뮸占쎈빍占쎈뼄");
+			throw new IdNotFoundException("");
 		} else {
 			if (emp.getEmpCode().equals(empCode)) {				
 				return true;
 			} else {				
 				throw new PwMissMatchException("占쎄텢占쎌뜚甕곕뜇�깈�몴占� 占쎌넇占쎌뵥占쎈퉸雅뚯눘苑�占쎌뒄");
-				System.our.println("�쁾�쁾�쁾�쁾�쁾�쁾�쁾�쁾�쁾�쁾�쁾");
-				System.our.println("�쁾�쁾�쁾�쁾�쁾�쁾�쁾�쁾�쁾�쁾�쁾");
 			}
 		}
 	}
