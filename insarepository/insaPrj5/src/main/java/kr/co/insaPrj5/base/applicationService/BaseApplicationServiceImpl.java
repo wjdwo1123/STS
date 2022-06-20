@@ -58,7 +58,18 @@ public class BaseApplicationServiceImpl implements BaseApplicationService {
 	
 	
 	public boolean loginEmployee(String name, String empCode) throws IdNotFoundException, PwMissMatchException {
-
+		System.our.println("★★★★★★★★★★★");
+		System.our.println("★★★★★★★★★★★");		System.our.println("★★★★★★★★★★★");
+		System.our.println("★★★★★★★★★★★");		System.our.println("★★★★★★★★★★★");
+		System.our.println("★★★★★★★★★★★");		System.our.println("★★★★★★★★★★★");
+		System.our.println("★★★★★★★★★★★");		System.our.println("★★★★★★★★★★★");
+		System.our.println("★★★★★★★★★★★");		System.our.println("★★★★★★★★★★★");
+		System.our.println("★★★★★★★★★★★");		System.our.println("★★★★★★★★★★★");
+		System.our.println("★★★★★★★★★★★");		System.our.println("★★★★★★★★★★★");
+		System.our.println("★★★★★★★★★★★");		System.our.println("★★★★★★★★★★★");
+		System.our.println("★★★★★★★★★★★");		System.our.println("★★★★★★★★★★★");
+		System.our.println("★★★★★★★★★★★");		System.our.println("★★★★★★★★★★★");
+		System.our.println("★★★★★★★★★★★");
 		EmpTO emp = empApplicationService.selectEmp(name); // empName�쑝濡� �궗�썝�쓽 �젙蹂대�� 李얜뒗�떎
 		System.our.println("★★★★★★★★★★★");
 		System.our.println("★★★★★★★★★★★");
