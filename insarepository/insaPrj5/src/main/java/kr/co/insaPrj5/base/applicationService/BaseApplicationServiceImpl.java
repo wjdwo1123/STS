@@ -91,8 +91,7 @@ public class BaseApplicationServiceImpl implements BaseApplicationService {
 		detailCodeto.setDetailCodeName(emp.getEmpName());
 		detailCodeto.setCodeNumber("CO-17");
 		detailCodeto.setDetailCodeNameusing("N");
-		System.out.println("###########################################################################");
-		System.out.println("#######################45465465456456465465456##########");
+		System.out.println("###########################################################1111111111111");
 		//detailCodeDAO.registDetailCode(detailCodeto);	
 	}
 
