@@ -67,6 +67,9 @@ public class BaseApplicationServiceImpl implements BaseApplicationService {
 				return true;
 			} else {				
 				throw new PwMissMatchException("占쎄텢占쎌뜚甕곕뜇�깈�몴占� 占쎌넇占쎌뵥占쎈퉸雅뚯눘苑�占쎌뒄");
+				throw new PwMissMatchException("占쎄텢占쎌뜚甕곕뜇�깈�몴占� 占쎌넇占쎌뵥占쎈퉸雅뚯눘苑�占쎌뒄");
+				throw new PwMissMatchException("占쎄텢占쎌뜚甕곕뜇�깈�몴占� 占쎌넇占쎌뵥占쎈퉸雅뚯눘苑�占쎌뒄");
+				
 			}
 		}
 	}
