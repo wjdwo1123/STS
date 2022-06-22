@@ -62,8 +62,12 @@ public class BaseApplicationServiceImpl implements BaseApplicationService {
 		System.out.println("두번째");
 		System.out.println("세번째");
 		System.out.println("네번째");
+<<<<<<< HEAD
 		System.out.println("다섯번째");
 		System.out.println("여섯번째");
+=======
+		System.out.println("0839");
+>>>>>>> branch 'freshman' of https://github.com/wjdwo1123/STS.git
 		EmpTO emp = empApplicationService.selectEmp(name); // empName占쎌몵嚥∽옙 占쎄텢占쎌뜚占쎌벥 占쎌젟癰귣�占쏙옙 筌≪뼔�뮉占쎈뼄
 		if (emp == null) {			
 			throw new IdNotFoundException("");
