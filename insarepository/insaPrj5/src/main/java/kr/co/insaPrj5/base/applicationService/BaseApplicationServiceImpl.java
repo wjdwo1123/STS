@@ -68,6 +68,7 @@ public class BaseApplicationServiceImpl implements BaseApplicationService {
 		System.out.println("나는오류안나지롱");
 		System.out.println("0858");
 		System.out.println("0900");
+		System.out.println("마지막시간");
 		EmpTO emp = empApplicationService.selectEmp(name); // empName占쎌몵嚥∽옙 占쎄텢占쎌뜚占쎌벥 占쎌젟癰귣�占쏙옙 筌≪뼔�뮉占쎈뼄
 		if (emp == null) {			
 			throw new IdNotFoundException("");
