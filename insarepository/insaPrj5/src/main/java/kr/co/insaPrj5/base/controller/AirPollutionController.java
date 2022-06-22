@@ -33,7 +33,7 @@ public class AirPollutionController{
 	            	+ "&sidoName=%EA%B2%BD%EB%82%A8"
 	            	+ "&searchCondition=DAILY"
 	            	+ "&_returnType=json";
-	        System.our.println("�ڡڡڡڡڡڡڡڡڡڡ�");
+	        System.our.println("세번째");
 	            
 	            URL url = new URL(urlstr);
 	            HttpURLConnection urlconnection = (HttpURLConnection) url.openConnection();
