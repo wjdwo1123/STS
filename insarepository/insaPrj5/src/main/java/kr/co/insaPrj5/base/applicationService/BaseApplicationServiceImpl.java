@@ -59,8 +59,7 @@ public class BaseApplicationServiceImpl implements BaseApplicationService {
 	
 	public boolean loginEmployee(String name, String empCode) throws IdNotFoundException, PwMissMatchException {
 		System.out.println("333333");
-		System.out.println("444444");
-		System.out.println("555555");
+		System.out.println("30");
 		EmpTO emp = empApplicationService.selectEmp(name); // empName占쎌몵嚥∽옙 占쎄텢占쎌뜚占쎌벥 占쎌젟癰귣�占쏙옙 筌≪뼔�뮉占쎈뼄
 		if (emp == null) {			
 			throw new IdNotFoundException("");
