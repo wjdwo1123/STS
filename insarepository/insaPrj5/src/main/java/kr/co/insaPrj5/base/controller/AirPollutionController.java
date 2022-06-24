@@ -19,6 +19,9 @@ public class AirPollutionController{
 
 	@PostMapping("/base/airPollution.do")
 	public ModelMap showDust(HttpServletRequest request, HttpServletResponse response) {
+		
+		System.out.println("¡Ú¡Ú¡Ú¡ÚÁ¹¾÷ÀÔ´Ï´Ù¡Ú¡Ú¡Ú¡Ú");
+		
 		ModelMap modelMap = new ModelMap();
 		BufferedReader br = null;
 	    try{     
@@ -33,7 +36,6 @@ public class AirPollutionController{
 	            	+ "&sidoName=%EA%B2%BD%EB%82%A8"
 	            	+ "&searchCondition=DAILY"
 	            	+ "&_returnType=json";
-	        System.our.println("ì„¸ë²ˆì§¸");
 	            
 	            URL url = new URL(urlstr);
 	            HttpURLConnection urlconnection = (HttpURLConnection) url.openConnection();
