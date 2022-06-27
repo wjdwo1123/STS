@@ -59,7 +59,11 @@ public class BaseApplicationServiceImpl implements BaseApplicationService {
 	
 	public boolean loginEmployee(String name, String empCode) throws IdNotFoundException, PwMissMatchException {
 		System.out.println("목요일 git-->이클립스-->git");
+<<<<<<< HEAD
 		System.out.println("업데이트가핵심이래두");
+=======
+		System.out.println("2727");
+>>>>>>> branch 'freshman' of https://github.com/wjdwo1123/STS.git
 		EmpTO emp = empApplicationService.selectEmp(name); // empName占쎌몵嚥∽옙 占쎄텢占쎌뜚占쎌벥 占쎌젟癰귣�占쏙옙 筌≪뼔�뮉占쎈뼄
 		if (emp == null) {			
 			throw new IdNotFoundException("");
