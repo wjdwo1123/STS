@@ -58,18 +58,15 @@ public class BaseApplicationServiceImpl implements BaseApplicationService {
 	
 	
 	public boolean loginEmployee(String name, String empCode) throws IdNotFoundException, PwMissMatchException {
-
 		EmpTO emp = empApplicationService.selectEmp(name); // empName�쑝濡� �궗�썝�쓽 �젙蹂대�� 李얜뒗�떎
 		System.our.println("ㄹㅇ핵심마지막");
 		if (emp == null) {			
-			throw new IdNotFoundException("�궗�썝紐낆씠 議댁옱�븯吏� �븡�뒿�땲�떎");
+			throw new IdNotFoundException("");
 		} else {
 			if (emp.getEmpCode().equals(empCode)) {				
 				return true;
 			} else {				
-				throw new PwMissMatchException("�궗�썝踰덊샇瑜� �솗�씤�빐二쇱꽭�슂");
-				System.our.println("★★★★★★★★★★★");
-				System.our.println("★★★★★★★★★★★");
+				throw new PwMissMatchException("占쎄텢占쎌뜚甕곕뜇�깈�몴占� 占쎌넇占쎌뵥占쎈퉸雅뚯눘苑�占쎌뒄");
 			}
 		}
 	}
@@ -94,8 +91,7 @@ public class BaseApplicationServiceImpl implements BaseApplicationService {
 		detailCodeto.setDetailCodeName(emp.getEmpName());
 		detailCodeto.setCodeNumber("CO-17");
 		detailCodeto.setDetailCodeNameusing("N");
-		System.out.println("###########################################################################");
-		
+		System.out.println("###########################################################1111111111111");
 		//detailCodeDAO.registDetailCode(detailCodeto);	
 	}
 
@@ -129,7 +125,7 @@ public class BaseApplicationServiceImpl implements BaseApplicationService {
 		return holidayList;
 	}
 
-	//�떆�뒪�뀥愿�由ъ뿉-> 遺��꽌愿�由щぉ濡� ���옣踰꾪듉�떆 �떎�뻾 �릺�뒗寃쎈줈 
+	//占쎈뻻占쎈뮞占쎈�ζ꽴占썹뵳�딅퓠-> �겫占쏙옙苑뚧꽴占썹뵳�됥걠嚥∽옙 占쏙옙占쎌삢甕곌쑵�뱣占쎈뻻 占쎈뼄占쎈뻬 占쎈┷占쎈뮉野껋럥以� 
 	@Override
 	public void batchDeptProcess(ArrayList<DeptTO> deptto) {
 		
@@ -147,9 +143,9 @@ public class BaseApplicationServiceImpl implements BaseApplicationService {
 				detailCodeto.setDetailCodeName(dept.getDeptName());
 				detailCodeto.setCodeNumber("CO-07");
 				detailCodeto.setDetailCodeNameusing("Y");
-				System.out.println("==================== 遺��꽌愿�由щぉ濡� update �떆�옉 =====================");
+				System.out.println("==================== �겫占쏙옙苑뚧꽴占썹뵳�됥걠嚥∽옙 update 占쎈뻻占쎌삂 =====================");
 				detailCodeRepository.save(detailCodeto);
-				System.out.println("==================== 遺��꽌愿�由щぉ濡� update �걹 =====================");
+				System.out.println("==================== �겫占쏙옙苑뚧꽴占썹뵳�됥걠嚥∽옙 update 占쎄국 =====================");
 				//detailCodeDAO.updateDetailCode(detailCodeto);
 				break;
 
@@ -161,9 +157,9 @@ public class BaseApplicationServiceImpl implements BaseApplicationService {
 				detailCodeto.setDetailCodeName(dept.getDeptName());
 				detailCodeto.setCodeNumber("CO-07");
 				detailCodeto.setDetailCodeNameusing("Y");
-				System.out.println("==================== 遺��꽌愿�由щぉ濡� insert �떆�옉 =====================");
+				System.out.println("==================== �겫占쏙옙苑뚧꽴占썹뵳�됥걠嚥∽옙 insert 占쎈뻻占쎌삂 =====================");
 				detailCodeRepository.save(detailCodeto);
-				System.out.println("==================== 遺��꽌愿�由щぉ濡� insert �걹 =====================");
+				System.out.println("==================== �겫占쏙옙苑뚧꽴占썹뵳�됥걠嚥∽옙 insert 占쎄국 =====================");
 				//detailCodeDAO.registDetailCode(detailCodeto);
 				break;
 
@@ -184,7 +180,7 @@ public class BaseApplicationServiceImpl implements BaseApplicationService {
 
 	}
 
-	//吏곴툒愿�由щぉ濡� ���옣踰꾪듉 [ 異붽� , �궘�젣 , �닔�젙 ] 
+	//筌욊낫�닋�꽴占썹뵳�됥걠嚥∽옙 占쏙옙占쎌삢甕곌쑵�뱣 [ �빊遺쏙옙 , 占쎄텣占쎌젫 , 占쎈땾占쎌젟 ] 
 	@Override
 	public void modifyPosition(ArrayList<BaseSalaryTO> positionList) {
  
@@ -194,13 +190,13 @@ public class BaseApplicationServiceImpl implements BaseApplicationService {
 				switch (position.getStatus()) {
 
 				case "update":
-					System.out.println("==================== update �떆�옉 =====================");
+					System.out.println("==================== update 占쎈뻻占쎌삂 =====================");
 					position.setStatus("");
 					baseSalaryRepository.save(position);
-					System.out.println("======================= update �걹==================");
+					System.out.println("======================= update 占쎄국==================");
 					//baseSalaryDAO.updatePosition(position);
-					detailCodeto.setDetailCodeNumber(position.getPositionCode()); //吏곴툒肄붾뱶  ex) POS001
-					detailCodeto.setDetailCodeName(position.getPosition()); //吏곸콉  ex) 遺��옣 
+					detailCodeto.setDetailCodeNumber(position.getPositionCode()); //筌욊낫�닋�굜遺얜굡  ex) POS001
+					detailCodeto.setDetailCodeName(position.getPosition()); //筌욊낯肄�  ex) �겫占쏙옙�삢 
 					detailCodeto.setCodeNumber("CO-04");
 					detailCodeto.setDetailCodeNameusing("Y");
 					detailCodeRepository.deleteByDetailCodeNumberAndDetailCodeNameAndCodeNumberAndDetailCodeNameusing(detailCodeto.getDetailCodeNumber(),detailCodeto.getDetailCodeName(),detailCodeto.getCodeNumber(),detailCodeto.getDetailCodeNameusing());
@@ -208,10 +204,10 @@ public class BaseApplicationServiceImpl implements BaseApplicationService {
 					break;
 
 				case "insert":
-					System.out.println("====================insert �떆�옉 =====================");
+					System.out.println("====================insert 占쎈뻻占쎌삂 =====================");
 					position.setStatus("");
 					baseSalaryRepository.save(position);
-					System.out.println("=======================insert �걹==================");
+					System.out.println("=======================insert 占쎄국==================");
 					//baseSalaryDAO.insertPosition(position);
 					detailCodeto.setDetailCodeNumber(position.getPositionCode());
 					detailCodeto.setDetailCodeName(position.getPosition());
@@ -223,14 +219,14 @@ public class BaseApplicationServiceImpl implements BaseApplicationService {
 					break;
 
 				case "delete":
-					System.out.println("====================delete �떆�옉 =====================");
+					System.out.println("====================delete 占쎈뻻占쎌삂 =====================");
 					position.setStatus("");
 					baseSalaryRepository.delete(position);
-					System.out.println("=======================delete �걹==================");
+					System.out.println("=======================delete 占쎄국==================");
 					//baseSalaryDAO.deletePosition(position);
 					detailCodeto.setDetailCodeNumber(position.getPositionCode());
 					detailCodeto.setDetailCodeName(position.getPosition());
-					System.out.println("####################吏곴툒愿�由щぉ濡앹뿉 吏곴툒肄붾뱶吏��슦湲� �떆�옉 #########################");
+					System.out.println("####################筌욊낫�닋�꽴占썹뵳�됥걠嚥≪빘肉� 筌욊낫�닋�굜遺얜굡筌욑옙占쎌뒭疫뀐옙 占쎈뻻占쎌삂 #########################");
 					detailCodeRepository.deleteByDetailCodeNumberAndDetailCodeName(detailCodeto.getDetailCodeNumber(),detailCodeto.getDetailCodeName()); //  detailCodeNumber, detailCodeName
 					//detailCodeDAO.deleteDetailCode(detailCodeto);
 					
@@ -242,14 +238,14 @@ public class BaseApplicationServiceImpl implements BaseApplicationService {
 
 	@Override
 	public String findWeekDayCount(Map<String, Object> map) {
-		System.out.println("===============�씪�닔=================");
+		System.out.println("===============占쎌뵬占쎈땾=================");
 		System.out.println(map.toString());
-		System.out.println("================�씪�닔================");
+		System.out.println("================占쎌뵬占쎈땾================");
 		return holidayDAO.selectWeekDayCount(map);
 
 	
 	}
-//�씠誘몄� 
+//占쎌뵠沃섎챷占� 
 	@Override
 	public void registEmpImg(HashMap<String,Object> map) {
 		String empCode = (String) map.get("empCode");
@@ -263,8 +259,8 @@ public class BaseApplicationServiceImpl implements BaseApplicationService {
 			emp.setStatus("update");
 		}
 		emp.setImgExtend(imgExtend);
-		System.out.println("踰좎씠�뒪�뼱�뵆�꽌鍮꾩뒪 �씠�뿞�뵾 : "+emp);
-		System.out.println("踰좎씠�뒪�뼱�뵆�꽌鍮꾩뒪 �씠�뿞�뵾�뒪�뀒�씠�꽣�뒪 : "+emp.getStatus());
+		System.out.println("甕곗쥙�뵠占쎈뮞占쎈선占쎈탣占쎄퐣�뜮袁⑸뮞 占쎌뵠占쎈퓹占쎈돗 : "+emp);
+		System.out.println("甕곗쥙�뵠占쎈뮞占쎈선占쎈탣占쎄퐣�뜮袁⑸뮞 占쎌뵠占쎈퓹占쎈돗占쎈뮞占쎈�믭옙�뵠占쎄숲占쎈뮞 : "+emp.getStatus());
 		empApplicationService.modifyEmployee(emp);
 
 	}
@@ -302,14 +298,14 @@ public class BaseApplicationServiceImpl implements BaseApplicationService {
 		}
 	}
 	
-	//由ы룷�듃
+	//�뵳�뗫７占쎈뱜
 	@Override
 	public ReportTO viewReport(String empCode) {
 		ReportTO to = reportDAO.selectReport(empCode);
 		return to;
 	}
 	
-	//由ы룷�듃	
+	//�뵳�뗫７占쎈뱜	
 	@Override
 	public ReportSalaryTO viewSalaryReport(HashMap<String, Object> parameters) {
 		ReportSalaryTO to = reportDAO.selecSalarytReport(parameters);
